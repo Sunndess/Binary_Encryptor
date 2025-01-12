@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binary Encryptor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="libs/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Binary Encryptor</h1>
+    <p class="description">Selecciona texto en la página y haz clic en el ícono de la extensión para encriptar o desencriptar.</p>
+
+    <!-- Área de entrada -->
+    <textarea id="input-text" placeholder="Escribe o pega el texto aquí..."></textarea>
+
+    <!-- Sección de resultados -->
+    <div id="result">
+      <textarea id="output-text" placeholder="Resultado aparecerá aquí" readonly></textarea>
+    </div>
+
+    <!-- Botones principales -->
+    <div class="buttons">
+      <button id="encrypt-btn" class="btn">Encriptar</button>
+      <button id="decrypt-btn" class="btn">Desencriptar</button>
+      <button id="clear-btn" class="btn">Limpiar</button>
+      <button id="copy-btn" class="btn">Copiar</button>
+    </div>
+
+    <!-- Generación de código QR -->
+    <div id="qr-code"></div>
+  </div>
+
+  <script src="popup.js"></script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script> <!-- QR Code JS -->
+</body>
+</html>
